@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maze Escape Runner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <header>
+            <h1>🎮 Maze Escape Runner</h1>
+            <p>Find the exit and escape the maze!</p>
+        </header>
+
+        <!-- Game information -->
+
+        <div class="game-info">
+
+            <div class="info-box">
+                <span>Level</span>
+                <strong id="level">1</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Time</span>
+                <strong id="timer">0</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Score</span>
+                <strong id="score">1000</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Lives</span>
+                <strong id="lives">❤️❤️❤️</strong>
+            </div>
+
+        </div>
+
+
+        <!-- Maze -->
+
+        <div id="maze"></div>
+
+
+        <!-- Controls -->
+
+        <div class="controls">
+
+            <p>
+                Use
+                <strong>Arrow Keys</strong>
+                or
+                <strong>W A S D</strong>
+                to move
+            </p>
+
+            <button id="restartBtn">
+                🔄 Restart Game
+            </button>
+
+        </div>
+
+
+        <!-- Game message -->
+
+        <div id="message">
+            Find the 🏁 and escape!
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

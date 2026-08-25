@@ -1,0 +1,302 @@
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e293b
+        );
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* ========================================
+   GAME CONTAINER
+======================================== */
+
+.game-container {
+
+    width: 900px;
+
+    max-width: 100%;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+
+    margin-bottom: 20px;
+}
+
+header h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 8px;
+}
+
+header p {
+
+    color: #cbd5e1;
+
+    font-size: 16px;
+}
+
+
+/* ========================================
+   GAME INFORMATION
+======================================== */
+
+.game-info {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.info-box {
+
+    background: #1e293b;
+
+    border: 1px solid #334155;
+
+    border-radius: 10px;
+
+    padding: 12px;
+}
+
+.info-box span {
+
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.info-box strong {
+
+    font-size: 18px;
+}
+
+
+/* ========================================
+   MAZE
+======================================== */
+
+#maze {
+
+    width: 840px;
+
+    max-width: 100%;
+
+    aspect-ratio: 21 / 13;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(21, 1fr);
+
+    grid-template-rows:
+        repeat(13, 1fr);
+
+    background: #0f172a;
+
+    border: 8px solid #475569;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   MAZE CELLS
+======================================== */
+
+.cell {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+
+/* Wall */
+
+.wall {
+
+    background: #1e293b;
+}
+
+
+/* Path */
+
+.path {
+
+    background: #e2e8f0;
+}
+
+
+/* Player */
+
+.player {
+
+    background: #e2e8f0;
+
+    font-size: clamp(16px, 2.5vw, 28px);
+}
+
+
+/* Exit */
+
+.exit {
+
+    background: #dcfce7;
+
+    font-size: clamp(16px, 2.5vw, 28px);
+}
+
+
+/* Start */
+
+.start {
+
+    background: #dbeafe;
+}
+
+
+/* ========================================
+   CONTROLS
+======================================== */
+
+.controls {
+
+    margin-top: 20px;
+}
+
+.controls p {
+
+    color: #cbd5e1;
+
+    margin-bottom: 12px;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+button {
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   MESSAGE
+======================================== */
+
+#message {
+
+    margin-top: 15px;
+
+    min-height: 25px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    header h1 {
+
+        font-size: 27px;
+    }
+
+    .game-info {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    #maze {
+
+        border-width: 5px;
+    }
+
+}
